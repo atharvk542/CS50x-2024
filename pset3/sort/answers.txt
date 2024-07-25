@@ -1,0 +1,19 @@
+sort1 uses: Bubble sort
+
+How do you know?: sort1 took a much longer time to sort a random 50000 values when compared to sort2 and sort3. This would mean it is bubble sort,
+as bubble sort takes more comparisons than both selection and merge sort. This is because it has to go through all 50000 values every passthrough, but
+for merge sort the list is split and merged in a different way and for selection sort values don't have to be searched if they were already sorted.
+This makes bubble sort the slowest algorithm, and it would make sense that sort1 is bubble sort as it took the longest time to sort 50000 random values.
+
+sort2 uses: Merge Sort
+
+How do you know?: sort2 took a much shorter time to do the 50000 reversed values than sort1 and sort3, and this is because merge sort's speed is
+theta of n(logn), which is fundamentally faster than both selection and bubble sort. Also, bubble sort and selection sort would take longer on a
+reversed data set since they have to bubble every letter up or search through all 50000 values for the smallest number.
+
+sort3 uses: Selection sort
+
+How do you know?: sort3 was faster than sort1 but slower than sort2 to sort 50000 random values. Since bubble sort is slower and takes more comparisons
+than both selection and merge sort, however sort1 and sort3 were both slow at sorting reversed sets, this means sort3 cannot be merge sort and cannot be
+bubble sort, so it is selection sort. This is supported by the fact that it was very fast at sorting an already sorted 50000 numbers, since it only had to
+pass through once.
