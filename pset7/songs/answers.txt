@@ -1,0 +1,6 @@
+Their audio aura tends to more sad but high energy and danceable songs,
+as their average valence is only 0.48 but their average energy is 0.65 and their average danceability is 0.71.
+
+This may not be representative of the listener, as they might listen to a different variety of songs outside of their top 100,
+and also there are other characteristics from songs that can determine the aura of a listener, and it isn't fair to judge aura
+based on only three characteristics.

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <title>Summer Activities Homepage</title>
+    <style>
+      body {
+        overflow-x: hidden;
+        /* This hides horizontal scrollbar */
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f58f7c;">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="color: #2c2b30" href="index.html">Summer Activities</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" style="color: #2c2b30" href="second.html">Travel</a>
+            <a class="nav-link active" style="color: #2c2b30" href="third.html">Hobbies</a>
+            <a class="nav-link active" style="color: #2c2b30" href="fourth.html">Q&A</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="d-flex justify-content-center">
+      <div class="card border main-card-style">
+        <div
+          style="display: flex; align-items: center; height: 70vh; text-align: center; flex-direction: column; justify-content: center;">
+          <h1 style="color: #d6d6d6;">
+            Welcome to the Summer Activities help page!
+          </h1>
+          <p style="font-size:20px; color: #d6d6d6;">
+            This website is dedicated to helping you find something fun to do this summer.
+          </p>
+          <p style="font-size:20px; color: #d6d6d6;">
+            Feel free to explore around and find some helpful information!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-band d-flex flex-row container-fluid">
+      <div class="row">
+        <div class="col-4">
+          <div class="card small-card-style">
+            <div class="card-body" style="align-items: center;">
+              <h5 class="card-title" style="text-align: center;">Travel</h5>
+              <p class="card-text" style="text-align: center;">Whether it's to the next town or the next country,
+                traveling is something that anyone can do with a little bit of planning and research!
+              </p>
+              <div class="d-flex justify-content-center">
+                <a href="#second.html" class="btn btn-primary" id="left"
+                  style="position: absolute; bottom: 20px;">Explore places!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card small-card-style">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Hobbies</h5>
+              <p class="card-text" style="text-align: center;">If you're stuck inside or want to do something
+                outdoors, there's always something fun you can learn with all the time you have!
+              </p>
+              <div class="d-flex justify-content-center">
+                <a href="#third.html" class="btn btn-primary" id="middle" style="position: absolute; bottom: 20px;">Find
+                  hobbies!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card small-card-style">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Q&A</h5>
+              <p class="card-text" style="text-align: center;">Learn a little bit more about CS50x, a Harvard Computer Science
+                course that is one of the largest in the world and is the class I'm making this website for.
+              </p>
+              <div class="d-flex justify-content-center">
+                <a href="#fourth.html" class="btn btn-primary" id="right"
+                  style="position: absolute; bottom: 20px;">Learn more!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-body-tertiary text-center text-lg-start">
+      <div class="text-center p-3" style="background-color: #f58f7c;">
+        Made for
+        <a class="text-body" href="https://cs50.harvard.edu/x/2024/"> Harvard CS50x 2024</a>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        let left = document.querySelector('#left');
+        let middle = document.querySelector('#middle');
+        let right = document.querySelector('#right');
+
+        if (left) {
+          left.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = "second.html";
+          });
+        }
+
+        if (middle) {
+          middle.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = "third.html";
+          });
+        }
+
+        if (right) {
+          right.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = "fourth.html";
+          });
+        }
+      });
+    </script>
+
+  </body>
+
+</html>

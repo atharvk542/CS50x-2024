@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let wrong = document.querySelectorAll('.wrong');
+                for (let i = 0; i < wrong.length; i++) {
+                    button = wrong[i];
+                    button.addEventListener('click', function() {
+                        wrong[i].style.backgroundColor = 'red';
+                        let messageElement = document.getElementById('message');
+                        messageElement.textContent = 'Incorrect';
+                    });
+                }
+
+                let right = document.querySelector('.right');
+                right.addEventListener('click', function() {
+                    right.style.backgroundColor = 'green';
+                    let messageElement = document.getElementById('message');
+                    messageElement.textContent = 'Correct!';
+                });
+
+                let frq = document.querySelector('.frqcheck');
+                let inputField = document.querySelector('.input');
+                let frqMsg = document.getElementById('frqmessage');
+
+                frq.addEventListener('click', function() {
+                    if (inputField.value == '3') {
+                        inputField.style.backgroundColor = 'green';
+                        frqMsg.textContent = 'Correct!';
+                    }
+                    else {
+                        inputField.style.backgroundColor = 'red';
+                        frqMsg.textContent = 'Incorrect';
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>The process of converting a higher level programming language to machine code is known as:</h3>
+                <button class='wrong'>Interpretation</button>
+                <button class='right'>Compilation</button>
+                <button class='wrong'>Execution</button>
+                <button class='wrong'>Debugging</button>
+                <button class='wrong'>Integration</button>
+
+                <p id='message'></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Johnny has 10 apples. If Johnny ate 4 of the apples and gave half of the rest away, how
+                    many apples does he have?</h3>
+                <input class='input'>
+                <button class='frqcheck'>Check Answer</button>
+                <p id='frqmessage'></p>
+            </div>
+        </div>
+    </body>
+
+</html>
